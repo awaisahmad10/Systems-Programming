@@ -1,0 +1,19 @@
+Question 1) q1_script.sh:
+This script takes 2 inputs from the user, the main string and the substring. It uses 'frep' to find where the substring is in the main string, then uses a piped 'wc -w' to get the number of times the substring was matched inside the main string. It then outputs this number to the user. 
+
+This script can be ran by typing: ./q1_script.sh
+
+Question 2) q2_script.sh:
+This script has 6 parts to it. The first part uses 'wc' to get the total number of lines in both files, then outputs this to the user.
+The second part uses 'fgrep' to find where the words 'London' and 'Paris' were in 'ATaleofTwoCities.txt', then uses 'wc -w' to get the number of times and output it to the user.
+The third part uses 'egrep' to search for the vowels in both files, then uses 'wc -l' to get the number and output it to the user.
+The fourth part uses 'fgrep' to find where 'the' appears in the two files, then uses 'wc -w' to get the number and output to the user. 
+The fifth part uses 'sed' to find the word 'the' in both files and replace it with 'ABC'.
+The sixth part uses 'grep' with '.' to get all the characters present in both files. The piped command 'sort -u' sorts these characters alpabetically and removes any duplicates. The piped command 'tr -d \n' removes the line break after each character.
+
+This script can be ran by typing: ./q2_script.sh
+
+Question 3) phone.pl:
+This script takes an input contaning any portion of a name from the user using '<STDIN>' and 'chomp' to remove the automatic line break from the input. It then opens the file 'phones' and appends the data from it to an array. After initializing a counter 'name_found' it loops through the array using a foreach. If the portion of the name is found in the current iteration, it prints that whole line from the phones directory and increments the counter. If after the loop the counter is still 0, that means the portion of the name was not found and this is outputted to the user. 
+
+This script can be ran by typing: perl phone.pl
